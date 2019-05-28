@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.5">
+    <id>Codeminers.Core.Modules.Web.Sitemap</id>
+    <title>Commmunications: Xml Sitemap Tools</title>
+    <authors>Codeminers Limited</authors>
+    <owners>Codeminers Limited</owners>
+    <version>1.0.0</version>
+    <projectUrl>https://www.codeminers.co.uk</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A utility library for generating and validating xml sitemaps</description>
+    <releaseNotes>First release</releaseNotes>
+    <copyright>Copyright Codeminers Limited © 2019</copyright>
+    <license type="expression">LGPL-3.0-or-later</license>
+    <dependencies>
+		<dependency id="Microsoft.AspNet.Mvc" version="5.2.3" />
+		<dependency id="Microsoft.AspNet.Razor" version="3.2.3" />
+		<dependency id="Microsoft.AspNet.WebPages" version="3.2.3" />
+		<dependency id="Microsoft.Web.Infrastructure" version="1.0.0.0" />
+		<dependency id="Newtonsoft.Json" version="10.0.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin/release/Codeminers.Core.Modules.Web.Sitemap.dll" target="lib/net471"></file>
+  </files>
+</package>

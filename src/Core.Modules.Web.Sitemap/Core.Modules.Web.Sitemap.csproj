@@ -107,6 +107,7 @@
     <Compile Include="Validation\ValidationResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Codeminers.Modules.Web.Sitemap.nuspec" />
     <None Include="packages.config" />
     <EmbeddedResource Include="Validation\SitemapSchema.xsd">
       <SubType>Designer</SubType>

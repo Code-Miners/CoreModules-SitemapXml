@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ImageNode.cs" company="Code Miners Limited">
+// <copyright file="NewsNode.cs" company="Code Miners Limited">
 //  The MIT License(MIT)
 //
 //  Copyright(c) 2013 Ufuk Hacıoğulları and contributors
@@ -25,55 +25,72 @@
 
 namespace Core.Modules.Web.Sitemap.Model.NodeTypes
 {
+
     using System.Xml.Serialization;
 
     /// <summary>
-    /// Encloses all information about a single image
+    /// Describes a single news item in a sitemap
     /// </summary>
-    public sealed class ImageNode
+    public class NewsNode
     {
-        public ImageNode()
-        {
-
-        }
-
         /// <summary>
-        /// Creates an instance of SitemapImage
+        /// Gets or sets the URL of the News Item.
         /// </summary>
-        /// <param name="url">The URL of the image.</param>
-        public ImageNode(string url)
-        {
-            Url = url;
-        }
-
-        /// <summary>
-        /// The URL of the image.
-        /// </summary>
-        [XmlElement("loc", Order = 1)]
+        [XmlElement("url", Order = 1)]
         public string Url { get; set; }
 
-        /// <summary>
-        /// The caption of the image.
-        /// </summary>
-        [XmlElement("caption", Order = 2)]
-        public string Caption { get; set; }
 
         /// <summary>
-        /// The geographic location of the image.
+        /// Gets or sets the genre of the News Item.
         /// </summary>
-        [XmlElement("geo_location", Order = 3)]
-        public string Location { get; set; }
+        [XmlElement("genre", Order = 2)]
+        public string Genre { get; set; }
 
         /// <summary>
-        /// The title of the image.
+        /// Gets or sets the publication date of the News Item
+        /// </summary>
+        [XmlElement("publicationDate", Order = 3)]
+        public string PublicationDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the title location of the News Item.
         /// </summary>
         [XmlElement("title", Order = 4)]
         public string Title { get; set; }
 
         /// <summary>
-        /// A URL to the license of the image.
+        /// Gets or sets the Keywords of the News Item.
         /// </summary>
-        [XmlElement("license", Order = 5)]
-        public string License { get; set; }
+        [XmlElement("keywords", Order = 5)]
+        public string Keywords { get; set; }
+
+        /// <summary>
+        /// Gets or sets the stock ticker for the News Item
+        /// </summary>
+        [XmlElement("stockTickers", Order = 6)]
+        public string StockTickers { get; set; }
+        
+        /// <summary>
+        /// Gets or sets additional publication information for this news node
+        /// </summary>
+        [XmlElement (elementName: "publication", Order =  7)]
+        public NewsPublicationNode Publication { get; set; }
+
+        /// <summary>
+        /// Default constructor, required for the serializer
+        /// </summary>
+        public NewsNode()
+        {
+
+        }
+
+        /// <summary>
+        /// Creates an instance of the news node
+        /// </summary>
+        /// <param name="url">The URL of the image.</param>
+        public NewsNode(string url)
+        {
+            Url = url;
+        }
     }
 }

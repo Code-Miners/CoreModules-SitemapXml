@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ImageSitemapValidator.cs" company="Code Miners Limited">
+// <copyright file="NewsSitemapValidator.cs" company="Code Miners Limited">
 //  Copyright (c) 2019 Code Miners Limited
 //   
 //  This program is free software: you can redistribute it and/or modify
@@ -30,9 +30,9 @@ namespace Core.Modules.Web.Sitemap.Validation
     /// <summary>
     /// A validator for the image sitemap
     /// </summary>
-    public sealed class ImageSitemapValidator
+    public sealed class NewsSitemapValidator
     {
-        public ValidationResult ValidateSitemap(ImageSitemap candidate)
+        public ValidationResult ValidateSitemap(NewsSitemap candidate)
         {
             try
             {
@@ -62,7 +62,7 @@ namespace Core.Modules.Web.Sitemap.Validation
         private TextReader LoadSchema()
         {
             TextReader textreader;
-            using (StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("Core.Modules.Web.Sitemap.Validation.ImageSitemapSchema.xsd")))
+            using (StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("Core.Modules.Web.Sitemap.Validation.NewsSitemapSchema.xsd")))
             {
                 string xsd = reader.ReadToEnd();
 

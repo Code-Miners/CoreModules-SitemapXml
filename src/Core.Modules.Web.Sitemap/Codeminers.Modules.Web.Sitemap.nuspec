@@ -5,7 +5,7 @@
     <title>Commmunications: Xml Sitemap Tools</title>
     <authors>Codeminers Limited</authors>
     <owners>Codeminers Limited</owners>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <projectUrl>https://www.codeminers.co.uk</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A utility library for generating and validating xml sitemaps</description>

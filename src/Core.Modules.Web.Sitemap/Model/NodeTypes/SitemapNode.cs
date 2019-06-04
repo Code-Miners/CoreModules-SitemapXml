@@ -39,6 +39,7 @@ namespace Core.Modules.Web.Sitemap.Model.NodeTypes
         public SitemapNode()
         {
             Images = new List<ImageNode>();
+            News = new List<NewsNode>();
             Translations = new List<AlternativeLanguageVersionNode>();
         }
 
@@ -96,6 +97,13 @@ namespace Core.Modules.Web.Sitemap.Model.NodeTypes
         /// </summary>
         [XmlElement("link", Order = 6, Namespace = XmlNamespaces.Xhtml)]
         public List<AlternativeLanguageVersionNode> Translations { get; set; }
+
+
+        /// <summary>
+        /// News.
+        /// </summary>
+        [XmlElement("news", Order = 7, Namespace = XmlNamespaces.News)]
+        public List<NewsNode> News { get; set; }
 
         /// <summary>
         /// Used for not serializing null values.

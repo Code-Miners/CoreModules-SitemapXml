@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ImageNode.cs" company="Code Miners Limited">
+// <copyright file="NewsPublicationNode.cs" company="Code Miners Limited">
 //  The MIT License(MIT)
 //
 //  Copyright(c) 2013 Ufuk Hacıoğulları and contributors
@@ -25,55 +25,33 @@
 
 namespace Core.Modules.Web.Sitemap.Model.NodeTypes
 {
+
     using System.Xml.Serialization;
 
     /// <summary>
-    /// Encloses all information about a single image
+    /// Describes a single set of publication info for a news node
     /// </summary>
-    public sealed class ImageNode
+    public class NewsPublicationNode
     {
-        public ImageNode()
+
+        /// <summary>
+        /// Gets or sets the name of the News node.
+        /// </summary>
+        [XmlElement("name", Order = 1)]
+        public string Name { get; set; }
+
+
+        /// <summary>
+        /// Gets or sets the language of the News node.
+        /// </summary>
+        [XmlElement("language", Order = 2)]
+        public string Language { get; set; }
+
+        /// <summary>
+        /// Creates an instance of NewsPublicationNode
+        /// </summary>
+        public NewsPublicationNode()
         {
-
         }
-
-        /// <summary>
-        /// Creates an instance of SitemapImage
-        /// </summary>
-        /// <param name="url">The URL of the image.</param>
-        public ImageNode(string url)
-        {
-            Url = url;
-        }
-
-        /// <summary>
-        /// The URL of the image.
-        /// </summary>
-        [XmlElement("loc", Order = 1)]
-        public string Url { get; set; }
-
-        /// <summary>
-        /// The caption of the image.
-        /// </summary>
-        [XmlElement("caption", Order = 2)]
-        public string Caption { get; set; }
-
-        /// <summary>
-        /// The geographic location of the image.
-        /// </summary>
-        [XmlElement("geo_location", Order = 3)]
-        public string Location { get; set; }
-
-        /// <summary>
-        /// The title of the image.
-        /// </summary>
-        [XmlElement("title", Order = 4)]
-        public string Title { get; set; }
-
-        /// <summary>
-        /// A URL to the license of the image.
-        /// </summary>
-        [XmlElement("license", Order = 5)]
-        public string License { get; set; }
     }
 }

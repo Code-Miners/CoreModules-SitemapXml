@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Wed Mar 18 2020 12:36:41 GMT+0000 (Greenwich Mean Time) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="urlset">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="url">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="loc" type="xs:string"></xs:element>
+                                             <xs:element name="video:video">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="video:loc" type="xs:string"></xs:element>
+                                                               <xs:element name="video:thumbnail_loc" type="xs:string"></xs:element>
+                                                               <xs:element name="video:title" type="xs:string"></xs:element>
+                                                               <xs:element name="video:description" type="xs:string"></xs:element>
+                                                               <xs:element name="video:content_loc" type="xs:string"></xs:element>
+                                                               <xs:element name="video:player_loc" type="xs:string"></xs:element>
+                                                               <xs:element name="video:duration" type="xs:int"></xs:element>
+                                                               <xs:element name="video:expiration_date" type="xs:date"></xs:element>
+                                                               <xs:element name="video:rating" type="xs:int"></xs:element>
+                                                               <xs:element name="video:view_count" type="xs:int"></xs:element>
+                                                               <xs:element name="video:publication_date" type="xs:date"></xs:element>
+                                                               <xs:element name="video:family_friendly" type="xs:string"></xs:element>
+                                                               <xs:element name="video:restriction" type="xs:string"></xs:element>
+                                                               <xs:element name="video:requires_subscription" type="xs:string"></xs:element>
+                                                               <xs:element name="video:live" type="xs:string"></xs:element>
+                                                               <xs:element name="video:category" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+                     <xs:attribute name="xmlns:video" type="xs:string"></xs:attribute>
+                     <xs:attribute name="xmlns" type="xs:string"></xs:attribute>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>

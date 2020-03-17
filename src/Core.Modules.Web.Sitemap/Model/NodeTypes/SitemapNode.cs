@@ -39,6 +39,7 @@ namespace Core.Modules.Web.Sitemap.Model.NodeTypes
         public SitemapNode()
         {
             Images = new List<ImageNode>();
+            Videos = new List<VideoNode>();
             News = new List<NewsNode>();
             Translations = new List<AlternativeLanguageVersionNode>();
         }
@@ -85,24 +86,26 @@ namespace Core.Modules.Web.Sitemap.Model.NodeTypes
         [XmlElement("priority", Order = 4)]
         public decimal? Priority { get; set; }
 
+        [XmlElement("video", Order = 5, Namespace = XmlNamespaces.Video)]
+        public List<VideoNode> Videos { get; set; }
+
         /// <summary>
         /// Additional information about important images on the page.
         /// It can include up to 1000 images.
         /// </summary>
-        [XmlElement("image", Order = 5, Namespace = XmlNamespaces.Image)]
+        [XmlElement("image", Order = 6, Namespace = XmlNamespaces.Image)]
         public List<ImageNode> Images { get; set; }
 
         /// <summary>
         /// Alternative language versions of the URL
         /// </summary>
-        [XmlElement("link", Order = 6, Namespace = XmlNamespaces.Xhtml)]
+        [XmlElement("link", Order = 7, Namespace = XmlNamespaces.Xhtml)]
         public List<AlternativeLanguageVersionNode> Translations { get; set; }
-
 
         /// <summary>
         /// News.
         /// </summary>
-        [XmlElement("news", Order = 7, Namespace = XmlNamespaces.News)]
+        [XmlElement("news", Order = 8, Namespace = XmlNamespaces.News)]
         public List<NewsNode> News { get; set; }
 
         /// <summary>

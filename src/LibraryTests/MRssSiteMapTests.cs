@@ -11,6 +11,7 @@ namespace LibraryTests
     using Core.Modules.Web.Sitemap.Serialization;
     using Core.Modules.Web.Sitemap.Validation;
     using NUnit.Framework;
+    using Core.Modules.Web.Sitemap.mRSSModel;
 
     [TestFixture]
     public class MRssSiteMapTests
@@ -23,6 +24,29 @@ namespace LibraryTests
             mrssNode.Version = "2.0";
 
             MediaContent Content1_1_1 = new MediaContent()
+            {
+                Url = "http://www.example.com/examples/mrss/example.flv",
+                Medium = "video",
+                Duration = "120",
+                Title = new Title()
+                {
+                    Title_ = "Grilling Steaks for Summer"
+                },
+                Description = new Description()
+                {
+                    Description_ = "Get perfectly done steaks every time"
+                },
+                Player = new Player()
+                {
+                    PlayerUrl = "http://www.example.com/shows/example/video.swf?flash_params"
+                },
+                Thumbnail = new Thumbnail()
+                {
+                    ThumbnailUrl = "http://www.example.com/examples/mrss/example.png"
+                }
+            };
+
+            MediaContent Content1_1_2 = new MediaContent()
             {
                 Url = "http://www.example.com/examples/mrss/example.flv",
                 Medium = "video",
@@ -62,6 +86,7 @@ namespace LibraryTests
 
             mrssNode.Channels = new List<Channel>();
             Item1_1.Content.Add(Content1_1_1);
+            Item1_1.Content.Add(Content1_1_2);
             channel1.Items.Add(Item1_1);
             mrssNode.Channels.Add(channel1);
 

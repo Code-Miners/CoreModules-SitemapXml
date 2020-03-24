@@ -85,7 +85,7 @@
     <Compile Include="Model\NewsSitemap.cs" />
     <Compile Include="Model\NodeTypes\AlternativeLanguageVersionNode.cs" />
     <Compile Include="Model\ImageSitemap.cs" />
-    <Compile Include="Model\NodeTypes\MRssNode.cs" />
+    <Compile Include="mRSSModel\MRssNode.cs" />
     <Compile Include="Model\NodeTypes\NewsPublicationNode.cs" />
     <Compile Include="Model\NodeTypes\ImageNode.cs" />
     <Compile Include="Model\NodeTypes\NewsNode.cs" />

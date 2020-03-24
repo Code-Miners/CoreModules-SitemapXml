@@ -1,6 +1,5 @@
 ﻿
-
-namespace Core.Modules.Web.Sitemap.Model.NodeTypes
+namespace Core.Modules.Web.Sitemap.mRSSModel
 {
     using System;
     using Core.Modules.Web.Sitemap.Model;
@@ -43,12 +42,12 @@ namespace Core.Modules.Web.Sitemap.Model.NodeTypes
         public List<Item> Items { get; set; }
     }
 
-    public class Item
+    public class Item 
     {
         [XmlElement(ElementName = "link", Order = 1)]
         public string Link { get; set; }
 
-        [XmlElement(ElementName = "content", Type = typeof(MediaContent), Order = 2)]
+        [XmlElement(ElementName = "content", Type = typeof(MediaContent), Order = 2, Namespace = XmlNamespaces.Mrss)]
         public List<MediaContent> Content { get; set; }
     }
 

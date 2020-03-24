@@ -40,7 +40,9 @@ namespace Core.Modules.Web.Sitemap.Serialization
                 { XmlNamespaces.Image, XmlNamespaces.ImagePrefix },
                 { XmlNamespaces.News, XmlNamespaces.NewsPrefix},
                 { XmlNamespaces.Video, XmlNamespaces.VideoPrefix},
-                { XmlNamespaces.Xhtml, XmlNamespaces.XhtmlPrefix}
+                { XmlNamespaces.Xhtml, XmlNamespaces.XhtmlPrefix},
+                { XmlNamespaces.Mrss, XmlNamespaces.MrrsPrefix},
+                { XmlNamespaces.Dcterms, XmlNamespaces.DctermsPrefix}
             };
         }
 

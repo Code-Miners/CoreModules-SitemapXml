@@ -41,5 +41,11 @@ namespace Core.Modules.Web.Sitemap.Serialization
 
         public const string Xhtml = "http://www.w3.org/1999/xhtml";
         public const string XhtmlPrefix = "xhtml";
+
+        public const string Mrss = "http://search.yahoo.com/mrss/";
+        public const string MrrsPrefix = "media";
+
+        public const string Dcterms = "http://purl.org/dc/terms/";
+        public const string DctermsPrefix = "dcterms";
     }
 }

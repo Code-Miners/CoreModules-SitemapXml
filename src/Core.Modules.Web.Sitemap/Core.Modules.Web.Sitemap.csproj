@@ -85,10 +85,17 @@
     <Compile Include="Model\NewsSitemap.cs" />
     <Compile Include="Model\NodeTypes\AlternativeLanguageVersionNode.cs" />
     <Compile Include="Model\ImageSitemap.cs" />
+    <Compile Include="mRSSModel\Channels\Channel.cs" />
+    <Compile Include="mRSSModel\Channels\Items\MediaContents\Media\Description.cs" />
+    <Compile Include="mRSSModel\Channels\Items\Item.cs" />
+    <Compile Include="mRSSModel\Channels\Items\MediaContents\MediaContent.cs" />
     <Compile Include="mRSSModel\MRssNode.cs" />
     <Compile Include="Model\NodeTypes\NewsPublicationNode.cs" />
     <Compile Include="Model\NodeTypes\ImageNode.cs" />
     <Compile Include="Model\NodeTypes\NewsNode.cs" />
+    <Compile Include="mRSSModel\Channels\Items\MediaContents\Media\Player.cs" />
+    <Compile Include="mRSSModel\Channels\Items\MediaContents\Media\Thumbnail.cs" />
+    <Compile Include="mRSSModel\Channels\Items\MediaContents\Media\Title.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ConfiguredSitemapProvider.cs" />
     <Compile Include="Providers\IImageSitemapProvider.cs" />

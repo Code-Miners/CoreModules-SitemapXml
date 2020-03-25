@@ -6,12 +6,19 @@ using System.Runtime.Remoting.Channels;
 namespace LibraryTests
 {
     using System;
+    using NUnit.Framework;
+
+    using Core.Modules.Web.Sitemap.Validation;
+    using Core.Modules.Web.Sitemap.Serialization;
+
     using Core.Modules.Web.Sitemap.Model;
     using Core.Modules.Web.Sitemap.Model.NodeTypes;
-    using Core.Modules.Web.Sitemap.Serialization;
-    using Core.Modules.Web.Sitemap.Validation;
-    using NUnit.Framework;
+    
     using Core.Modules.Web.Sitemap.mRSSModel;
+    using Core.Modules.Web.Sitemap.mRSSModel.Channels;
+    using Core.Modules.Web.Sitemap.mRSSModel.Channels.Items;
+    using Core.Modules.Web.Sitemap.mRSSModel.Channels.Items.MediaContents;
+    using Core.Modules.Web.Sitemap.mRSSModel.Channels.Items.MediaContents.Media;
 
     [TestFixture]
     public class MRssSiteMapTests

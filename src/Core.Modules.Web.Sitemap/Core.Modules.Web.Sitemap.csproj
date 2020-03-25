@@ -121,6 +121,7 @@
     <Compile Include="Mvc\SitemapIndexResult.cs" />
     <Compile Include="Mvc\SitemapResult.cs" />
     <Compile Include="Validation\ImageSitemapValidator.cs" />
+    <Compile Include="Validation\MrssSitemapValidator.cs" />
     <Compile Include="Validation\NewsSitemapValidator.cs" />
     <Compile Include="Validation\SitemapValidator.cs" />
     <Compile Include="Validation\ValidationResult.cs" />

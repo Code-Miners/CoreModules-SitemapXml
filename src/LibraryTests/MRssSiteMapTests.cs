@@ -26,9 +26,7 @@ namespace LibraryTests
         [Test]
         public void GenerationAndSerialisationTest()
         {
-            MRssNode mrssNode = new MRssNode();
-
-            mrssNode.Version = "2.0";
+            MRssNode mrssNode = new MRssNode("2.0");
 
             MediaContent Content1_1_1 = new MediaContent()
             {
@@ -85,6 +83,18 @@ namespace LibraryTests
             Assert.IsNotNull(output);
 
             Console.Error.WriteLine(output);
+        }
+
+        [Test]
+        public void ValidateGeneratedXmlAgainstMrssSchemaTest()
+        {
+            MrssSitemapValidator validator = new MrssSitemapValidator();
+
+            MRssNode mrssNode = new MRssNode("2.0");
+
+            ValidationResult result = validator.ValidateSitemap(mrssNode);
+
+            Assert.IsFalse(result.IsValid, "Generated sitemap doesn't validate against the sitemap schema");
         }
     }
 }

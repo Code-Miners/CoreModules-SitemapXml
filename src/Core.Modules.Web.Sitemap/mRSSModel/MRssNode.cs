@@ -7,9 +7,19 @@ namespace Core.Modules.Web.Sitemap.mRSSModel
     using System.Collections.Generic;
     using Core.Modules.Web.Sitemap.mRSSModel.Channels;
 
-    [XmlRootAttribute(ElementName = "rss", Namespace = XmlNamespaces.Sitemap)]
+    [XmlRoot(ElementName = "rss", Namespace = XmlNamespaces.Sitemap)]
     public class MRssNode : IXmlNamespaceProvider
     {
+        public MRssNode()
+        {
+
+        }
+
+        public MRssNode(string version)
+        {
+            Version = version;
+        }
+
         [XmlAttribute(AttributeName = "version")]
         public string Version { get; set; }
 

@@ -33,13 +33,13 @@ namespace LibraryTests
             MediaContent Content1_1_1 = new MediaContent()
             {
                 ContentUrl = "http://www.example.com/examples/mrss/example.flv",
-                ContentFileSize = "",
-                ContentType =  "",
+                ContentFileSize = "12216320",
+                ContentType = "video",
                 ContentMedium = "video",
-                ContentDuration = "120",
-                ContentHeight = "",
-                ContentWidth = "",
-                ContentLang = "",
+                ContentDuration = "185",
+                ContentHeight = "200",
+                ContentWidth = "300",
+                ContentLang = "en",
                 Title = new Title()
                 {
                     MediaTitle = "Grilling Steaks for Summer"

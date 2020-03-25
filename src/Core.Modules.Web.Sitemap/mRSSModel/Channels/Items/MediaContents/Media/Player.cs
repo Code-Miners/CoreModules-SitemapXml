@@ -7,6 +7,6 @@ namespace Core.Modules.Web.Sitemap.mRSSModel.Channels.Items.MediaContents.Media
     public class Player
     {
         [XmlAttribute(AttributeName = "url")]
-        public string PlayerUrl { get; set; }
+        public string MediaPlayerUrl { get; set; }
     }
 }

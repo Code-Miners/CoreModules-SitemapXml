@@ -8,13 +8,28 @@ namespace Core.Modules.Web.Sitemap.mRSSModel.Channels.Items.MediaContents
     {
         // Attributes for the Content tag
         [XmlAttribute("url")]
-        public string Url { get; set; }
+        public string ContentUrl { get; set; }
 
         [XmlAttribute("medium")]
-        public string Medium { get; set; }
+        public string ContentMedium { get; set; }
+
+        [XmlAttribute("filesize")]
+        public string ContentFileSize { get; set; }
+
+        [XmlAttribute("type")]
+        public string ContentType { get; set; }
 
         [XmlAttribute("duration")]
-        public string Duration { get; set; }
+        public string ContentDuration { get; set; }
+
+        [XmlAttribute("height")]
+        public string ContentHeight { get; set; }
+
+        [XmlAttribute("width")]
+        public string ContentWidth { get; set; }
+
+        [XmlAttribute("lang")]
+        public string ContentLang { get; set; }
 
 
         // Sub elements of the Content tag 

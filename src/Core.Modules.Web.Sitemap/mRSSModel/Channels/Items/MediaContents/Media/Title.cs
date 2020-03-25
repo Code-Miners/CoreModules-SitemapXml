@@ -7,6 +7,6 @@ namespace Core.Modules.Web.Sitemap.mRSSModel.Channels.Items.MediaContents.Media
     public class Title
     {
         [XmlText]
-        public string Title_ { get; set; }
+        public string MediaTitle { get; set; }
     }
 }

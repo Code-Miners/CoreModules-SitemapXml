@@ -32,47 +32,29 @@ namespace LibraryTests
 
             MediaContent Content1_1_1 = new MediaContent()
             {
-                Url = "http://www.example.com/examples/mrss/example.flv",
-                Medium = "video",
-                Duration = "120",
+                ContentUrl = "http://www.example.com/examples/mrss/example.flv",
+                ContentFileSize = "",
+                ContentType =  "",
+                ContentMedium = "video",
+                ContentDuration = "120",
+                ContentHeight = "",
+                ContentWidth = "",
+                ContentLang = "",
                 Title = new Title()
                 {
-                    Title_ = "Grilling Steaks for Summer"
+                    MediaTitle = "Grilling Steaks for Summer"
                 },
                 Description = new Description()
                 {
-                    Description_ = "Get perfectly done steaks every time"
+                    MediaDescription = "Get perfectly done steaks every time"
                 },
                 Player = new Player()
                 {
-                    PlayerUrl = "http://www.example.com/shows/example/video.swf?flash_params"
+                    MediaPlayerUrl = "http://www.example.com/shows/example/video.swf?flash_params"
                 },
                 Thumbnail = new Thumbnail()
                 {
-                    ThumbnailUrl = "http://www.example.com/examples/mrss/example.png"
-                }
-            };
-
-            MediaContent Content1_1_2 = new MediaContent()
-            {
-                Url = "http://www.example.com/examples/mrss/example.flv",
-                Medium = "video",
-                Duration = "120",
-                Title = new Title()
-                {
-                    Title_ = "Grilling Steaks for Summer"
-                },
-                Description = new Description()
-                {
-                    Description_ = "Get perfectly done steaks every time"
-                },
-                Player = new Player()
-                {
-                    PlayerUrl = "http://www.example.com/shows/example/video.swf?flash_params"
-                },
-                Thumbnail = new Thumbnail()
-                {
-                    ThumbnailUrl = "http://www.example.com/examples/mrss/example.png"
+                    MediaThumbnailUrl = "http://www.example.com/examples/mrss/example.png"
                 }
             };
 
@@ -93,7 +75,6 @@ namespace LibraryTests
 
             mrssNode.Channels = new List<Channel>();
             Item1_1.Content.Add(Content1_1_1);
-            Item1_1.Content.Add(Content1_1_2);
             channel1.Items.Add(Item1_1);
             mrssNode.Channels.Add(channel1);
 

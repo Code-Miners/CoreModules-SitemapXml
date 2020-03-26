@@ -23,86 +23,9 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-namespace Core.Modules.Web.Sitemap.Model.NodeTypes
+namespace Core.Modules.Web.Sitemap.Model.NodeTypes.Video
 {
     using System.Xml.Serialization;
-    using System;
-
-    /// <summary>
-    /// The Restrict Property has both a Text and Attribute element for the xml request
-    /// Countries should be in a space delimited list
-    /// relationship should be either 'allow' or 'deny'
-    /// E.g. Output XML:
-    /// <video:restriction relationship="allow">CA MX</video:restriction>
-    /// </summary>
-    [Serializable]
-    public class Restrict
-    {
-        [XmlText] 
-        public string Countries { get; set; }
-
-        [XmlAttribute] 
-        public string relationship { get; set; }
-    }
-
-    /// <summary>
-    /// The Platform Property has both a Text and Attribute element for the xml request
-    /// Platforms should be a space delimited list, including 1 or more of the following: web, mobile, tv
-    /// relationship should be either 'allow' or 'deny'
-    /// E.g. Output XML:
-    /// <video:platform relationship="allow">web mobile tv</video:platform>
-    /// </summary>
-    [Serializable]
-    public class Platform
-    {
-        [XmlText]
-        public string Platforms { get; set; }
-
-        [XmlAttribute]
-        public string relationship { get; set; }
-    }
-
-    /// <summary>
-    /// The Price Property has both a Text and multiple Attribute elements for the xml request
-    /// The amount should be actual price.
-    /// currency [Required] Specifies the currency in ISO 4217 format.
-    /// type [Optional] Specifies the purchase option. Supported values are rent and own. If this is not specified, the default value is own.
-    /// resolution [Optional] Specifies the resolution of the purchased version. Supported values are hd and sd.
-    /// E.g. Output XML:
-    /// <video:price currency="GBP" type="rent" resolution="sd">00.00</video:price>
-    /// </summary>
-    [Serializable]
-    public class Price
-    {
-        [XmlText]
-        public string Amount { get; set; }
-
-        [XmlAttribute]
-        public string currency { get; set; }
-
-        [XmlAttribute]
-        public string type { get; set; }
-
-        [XmlAttribute]
-        public string resolution { get; set; }
-    }
-
-    /// <summary>
-    /// The Platform Property has both a Text and Attribute element for the xml request
-    /// The UploadName should be the owner of the video
-    /// info [Optional] Specifies the URL of a webpage with additional information about this uploader. This URL must be in the same domain as the <loc> tag.
-    /// E.g. Output XML:
-    /// <video:uploader info="http://www.example.com/UploaderDetails">Example Name</video:uploader>
-    /// </summary>
-    [Serializable]
-    public class Uploader
-    {
-        [XmlText]
-        public string UploaderName { get; set; }
-
-        [XmlAttribute]
-        public string info { get; set; }
-    }
 
     /// <summary>
     /// Encloses all information Required about a single Video

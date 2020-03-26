@@ -1,19 +1,34 @@
-﻿
-
-using System.Collections.Generic;
-using System.Runtime.Remoting.Channels;
+﻿//-----------------------------------------------------------------------
+// <copyright file="MRssSiteMapeTests.cs" company="Code Miners Limited">
+//  Copyright (c) 2019 Code Miners Limited
+//   
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU Lesser General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//  
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
+//  GNU Lesser General Public License for more details.
+//  
+//  You should have received a copy of the GNU Lesser General Public License
+//  along with this program.If not, see<https://www.gnu.org/licenses/>.
+// </copyright>
+//-----------------------------------------------------------------------
 
 namespace LibraryTests
 {
-    using System;
     using NUnit.Framework;
 
+    using System;
+    using System.Collections.Generic;
+    using System.Runtime.Remoting.Channels;
+    
     using Core.Modules.Web.Sitemap.Validation;
     using Core.Modules.Web.Sitemap.Serialization;
-
     using Core.Modules.Web.Sitemap.Model;
     using Core.Modules.Web.Sitemap.Model.NodeTypes;
-    
     using Core.Modules.Web.Sitemap.mRSSModel;
     using Core.Modules.Web.Sitemap.mRSSModel.Channels;
     using Core.Modules.Web.Sitemap.mRSSModel.Channels.Items;

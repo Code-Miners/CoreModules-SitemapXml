@@ -37,15 +37,18 @@ namespace LibraryTests
             imageNode.Caption = "This is my picture";
 
             ImageNode imageNode2 = new ImageNode("http://www.example.com/images/pic2.png");
+            imageNode2.Title = "Picture 2";
+            imageNode2.Caption = "This is my picture";
+
             SitemapNode page = new SitemapNode("http://www.example.com/directory.html");
             page.Images.Add(imageNode);
             page.Images.Add(imageNode2);
 
             ImageSitemap sitemap = new ImageSitemap(new [] { page });
-
+            
             XmlSerializer serializer = new XmlSerializer();
 
-            string output = serializer.Serialize(sitemap);
+            string output = serializer.Serialize(page);
 
             Assert.IsNotNull(output);
 

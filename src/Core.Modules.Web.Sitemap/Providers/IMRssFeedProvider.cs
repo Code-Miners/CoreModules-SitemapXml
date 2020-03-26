@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Thumbnail.cs" company="Code Miners Limited">
+// <copyright file="IMRssFeedProvider.cs" company="Code Miners Limited">
 //  The MIT License(MIT)
 //
 //  Copyright(c) 2013 Ufuk Hacıoğulları and contributors
@@ -23,13 +23,12 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-namespace Core.Modules.Web.Sitemap.mRSSModel.Channels.Items.MediaContents.Media
+namespace Core.Modules.Web.Sitemap.Providers
 {
-    using System.Xml.Serialization;
+    using Core.Modules.Web.Sitemap.mRSSModel;
 
-    public class Thumbnail
+    public interface IMRssFeedProvider
     {
-        [XmlAttribute(AttributeName = "url")]
-        public string MediaThumbnailUrl { get; set; }
+        MRssNode MrssNodeFeed();
     }
 }

@@ -29,6 +29,7 @@ namespace Core.Modules.Web.Sitemap.Model.NodeTypes
     using System.Collections.Generic;
     using System.Xml.Serialization;
     using Serialization;
+    using Video;
 
     /// <summary>
     /// Encloses all information about a specific URL.

@@ -44,7 +44,6 @@ namespace Core.Modules.Web.Sitemap.Providers
                 data.Add(node);
             }
 
-
             return new Sitemap(data);
         }
 

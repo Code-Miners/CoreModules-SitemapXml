@@ -17,15 +17,12 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-
-using Core.Modules.Web.Sitemap.Model;
-using Core.Modules.Web.Sitemap.Serialization;
-
 namespace LibraryTests
 {
     using System;
     using Core.Modules.Web.Sitemap.Model;
     using Core.Modules.Web.Sitemap.Model.NodeTypes;
+    using Core.Modules.Web.Sitemap.Model.NodeTypes.Video;
     using Core.Modules.Web.Sitemap.Serialization;
     using Core.Modules.Web.Sitemap.Validation;
     using NUnit.Framework;
@@ -51,20 +48,20 @@ namespace LibraryTests
             videoNode.FamFriendly = "yes";
             videoNode.Restrict = new Restrict()
             {
-                Countries = "CA MX", relationship = "allow"
+                Countries = "CA MX", Relationship = "allow"
             };
             videoNode.Platform = new Platform()
             {
-                Platforms = "web mobile tv", relationship = "allow"
+                Platforms = "web mobile tv", Relationship = "allow"
             };
             videoNode.Price = new Price()
             {
-                Amount = "00.00", currency = "GBP", type = "rent", resolution = "sd"
+                Amount = "00.00", Currency = "GBP", PriceType = "rent", Resolution = "sd"
             };
             videoNode.Uploader = new Uploader()
             {
                 UploaderName = "Example Name",
-                info = "http://www.example.com/UploaderDetails"
+                Info = "http://www.example.com/UploaderDetails"
             };
             videoNode.RequirSub = "yes";
             videoNode.LiveVideo = "yes";
